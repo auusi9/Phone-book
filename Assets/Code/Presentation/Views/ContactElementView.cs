@@ -1,4 +1,5 @@
 ﻿using System;
+using Code.Data.Vo;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -19,9 +20,9 @@ public class ContactElementView : MonoBehaviour
         transform.SetParent(parent, false);
     }
     
-    public void SetData(String p)
+    public void SetData(ContactVo p)
     {
-        _textMeshProUgui.SetText(p);
+        _textMeshProUgui.SetText(p.Name + p.Id);
     }
     
     private void Despawn()
