@@ -41,7 +41,7 @@ namespace Code.Presentation.Views.ContactList
         public void SetData(ContactVo p)
         {
             _p = p;
-            _textMeshProUgui.SetText(p.Name + p.Id);
+            _textMeshProUgui.SetText(p.Name + " " + p.LastName);
         }
     
         private void Despawn()

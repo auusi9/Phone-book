@@ -111,7 +111,7 @@ namespace Code.Presentation.Models
 
         public void SearchContact(string search)
         {
-            List<ContactVo> contactsFound = _contacts.Where(x => x.Name.Contains(search)).ToList();
+            List<ContactVo> contactsFound = _contacts.Where(x => x.Name.Contains(search) || x.LastName.Contains(search)).ToList();
             SortByCurrentSortType(contactsFound);
         }
 

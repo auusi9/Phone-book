@@ -115,8 +115,8 @@ namespace Code.Presentation.Views.EditContact
 
         private void SetData()
         {
-            _lastNameDetailElement.SetData(_editingContact.Name);
-            _nameDetailElement.SetData(_editingContact.LastName);
+            _nameDetailElement.SetData(_editingContact.Name);
+            _lastNameDetailElement.SetData(_editingContact.LastName);
             _phoneDetailElement.SetData(_editingContact.PhoneNumber);
             _emailDetailElement.SetData(_editingContact.Email);
             _twitterDetailElement.SetData(_editingContact.TwitterHandle);
