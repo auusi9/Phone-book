@@ -1,3 +1,4 @@
+using Code.Data;
 using Code.Presentation.Actions;
 using Code.Presentation.Controllers;
 using Code.Presentation.Models;
@@ -21,7 +22,13 @@ namespace Code.Installers
             BindControllers();
             BindModels();
             BindViews();
+            BindServices();
             DeclareNotifications();
+        }
+
+        private void BindServices()
+        {
+            Container.BindInterfacesTo<Persistance>().AsTransient();
         }
 
         private void DeclareAndBindActions()

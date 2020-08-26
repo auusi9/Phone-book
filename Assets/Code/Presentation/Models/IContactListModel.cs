@@ -9,5 +9,6 @@ namespace Code.Presentation.Models
         void SortContactsByDate();
         bool SaveContactIfValid(ContactVo contact);
         bool RemoveContact(int contactContactId);
+        ContactVo[] GetContacts();
     }
 }

@@ -14,6 +14,11 @@ namespace Code.Presentation.Models
 
         public void SetUserContacts(ContactVo[] contacts)
         {
+            if (contacts == null || contacts.Length == 0)
+            {
+                return;
+            }
+            
             _contacts = new List<ContactVo>(contacts);
 
             SortByCurrentSortType();
@@ -56,7 +61,12 @@ namespace Code.Presentation.Models
             
             if (savedContact == null)
             {
-                int maxId = _contacts.Max(x => x.Id) + 1;
+                int maxId = 0;
+                if (_contacts.Count > 0)
+                {
+                    maxId = _contacts.Max(x => x.Id) + 1;
+                }
+                
                 ContactVo newContact = new ContactVo(maxId, contact);
                 _contacts.Add(newContact);
                 SortByCurrentSortType();
@@ -87,6 +97,11 @@ namespace Code.Presentation.Models
             
             SortByCurrentSortType();
             return true;
+        }
+
+        public ContactVo[] GetContacts()
+        {
+            return _contacts.ToArray();
         }
 
         private enum SortType

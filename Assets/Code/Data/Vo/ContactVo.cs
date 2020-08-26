@@ -3,6 +3,7 @@ using Code.Data.Dto;
 
 namespace Code.Data.Vo
 {
+    [Serializable]
     public class ContactVo
     {
         public int Id { get; }
@@ -37,6 +38,12 @@ namespace Code.Data.Vo
             TwitterHandle = contactVo.TwitterHandle;
             DateAdded = DateTime.Now;
         }
+        
+        public ContactVo()
+        {
+            Id = -1;
+            Name = LastName = Description = PhoneNumber = Email = TwitterHandle = string.Empty;
+        }
 
         public ContactMissingRequiredDetailsDto GetMissingDetails()
         {
@@ -65,6 +72,11 @@ namespace Code.Data.Vo
         public bool IsValid()
         {
             return !GetMissingDetails().IsAnythingMissing();
+        }
+
+        public static ContactVo Empty()
+        {
+            return new ContactVo();
         }
     }
 
