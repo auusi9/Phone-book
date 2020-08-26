@@ -7,5 +7,7 @@ namespace Code.Presentation.Models
         void SetUserContacts(ContactVo[] contacts);
         void SortContactsByAlphabet();
         void SortContactsByDate();
+        bool SaveContactIfValid(ContactVo contact);
+        bool RemoveContact(int contactContactId);
     }
 }

@@ -3,6 +3,7 @@ using Code.Presentation.Controllers;
 using Code.Presentation.Models;
 using Code.Presentation.Notifications;
 using Code.Presentation.Views;
+using Code.Presentation.Views.ContactList;
 using UnityEngine;
 using Zenject;
 

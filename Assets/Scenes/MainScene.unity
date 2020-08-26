@@ -1764,6 +1764,7 @@ GameObject:
   - component: {fileID: 1541718001}
   - component: {fileID: 1541718000}
   - component: {fileID: 1541718002}
+  - component: {fileID: 1541718003}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -1786,6 +1787,7 @@ MonoBehaviour:
   _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: 1541718002}
+  - {fileID: 1541718003}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -1830,6 +1832,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _contactElementPrefab: {fileID: 7594682097867986539, guid: cec5a47d06d34c54db8428017f9a70b4,
+    type: 3}
+--- !u!114 &1541718003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541717999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037b1c0e3e004f9d9075638135c436aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _contactEditPopupPrefab: {fileID: 2146346058743343622, guid: 5db78c65905eb624ca51ad36ed9b35f3,
     type: 3}
 --- !u!1 &1573814596
 GameObject:

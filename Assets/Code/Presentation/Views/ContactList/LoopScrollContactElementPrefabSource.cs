@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Presentation.Views
+namespace Code.Presentation.Views.ContactList
 {
     public class LoopScrollContactElementPrefabSource : LoopScrollPrefabSource
     {

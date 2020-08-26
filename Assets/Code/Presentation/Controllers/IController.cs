@@ -7,6 +7,6 @@ namespace Code.Presentation.Controllers
 
     public interface IController<in T>
     {
-        void Execute(T parameter);
+        void Execute(T contact);
     }
 }

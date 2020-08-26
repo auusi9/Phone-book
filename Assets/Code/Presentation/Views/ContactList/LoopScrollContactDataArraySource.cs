@@ -1,9 +1,7 @@
-using System;
 using Code.Data.Vo;
-using UnityEngine;
 using UnityEngine.UI;
 
-namespace Code.Presentation.Views
+namespace Code.Presentation.Views.ContactList
 {
     public class LoopScrollContactDataArraySource<T> : LoopScrollArraySource<T> where T : ContactVo
     {
