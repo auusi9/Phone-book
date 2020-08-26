@@ -25,7 +25,6 @@ namespace Code.Presentation.Views.ContactList
         void OnDestroy()
         {
             _button.onClick.RemoveListener(AddButtonPressed);   
-
         }
     }
 }

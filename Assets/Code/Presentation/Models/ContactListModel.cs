@@ -40,13 +40,13 @@ namespace Code.Presentation.Models
         public void SortContactsByAlphabet()
         {
             _currentSortType = SortType.Alphabet;
-            _signalBus.Fire(new ContactListRefreshedNotification(_contacts.ToArray()));
+            _signalBus.Fire(new ContactListRefreshedNotification(_contacts.OrderBy(x => x.Name).ToArray()));
         }
 
         public void SortContactsByDate()
         {
             _currentSortType = SortType.Date;
-            _signalBus.Fire(new ContactListRefreshedNotification(_contacts.ToArray()));
+            _signalBus.Fire(new ContactListRefreshedNotification(_contacts.OrderByDescending(x => x.DateAdded).ToArray()));
         }
 
         public bool SaveContactIfValid(ContactVo contact)

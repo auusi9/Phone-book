@@ -10,34 +10,64 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="Data" t="Include">
+            <e p="Dto" t="Include">
+              <e p="ContactDto.cs" t="Include" />
+            </e>
+            <e p="Persistance.cs" t="Include" />
+            <e p="PersistanceAdapter.cs" t="Include" />
+            <e p="Ports" t="Include">
+              <e p="IPersistance.cs" t="Include" />
+              <e p="IPersistanceAdapter.cs" t="Include" />
+            </e>
             <e p="Vo" t="Include">
               <e p="ContactVo.cs" t="Include" />
             </e>
           </e>
           <e p="Installers" t="Include">
+            <e p="ContactEditPopupInstaller.cs" t="Include" />
             <e p="ContactListInstaller.cs" t="Include" />
           </e>
           <e p="Presentation" t="Include">
             <e p="Actions" t="Include">
+              <e p="DeleteContactAction.cs" t="Include" />
               <e p="RefreshContactListAction.cs" t="Include" />
+              <e p="SaveContactAction.cs" t="Include" />
+              <e p="SortContactsByAlphabetAction.cs" t="Include" />
+              <e p="SortContactsByDateAction.cs" t="Include" />
             </e>
             <e p="Controllers" t="Include">
+              <e p="DeleteContactController.cs" t="Include" />
               <e p="IController.cs" t="Include" />
               <e p="RefreshContactListController.cs" t="Include" />
+              <e p="SaveContactController.cs" t="Include" />
+              <e p="SortContactsByAlphabetController.cs" t="Include" />
+              <e p="SortContactsByDateController.cs" t="Include" />
             </e>
             <e p="Models" t="Include">
               <e p="ContactListModel.cs" t="Include" />
               <e p="IContactListModel.cs" t="Include" />
             </e>
             <e p="Notifications" t="Include">
+              <e p="ContactDetailsNotValidNotification.cs" t="Include" />
               <e p="ContactListRefreshedNotification.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
-              <e p="ContactElementView.cs" t="Include" />
-              <e p="ContactListScrollRect.cs" t="Include" />
-              <e p="LoopScrollContactDataArraySource.cs" t="Include" />
-              <e p="LoopScrollContactElementPrefabSource.cs" t="Include" />
-              <e p="SearchButtonView.cs" t="Include" />
+              <e p="ContactList" t="Include">
+                <e p="AddNewContactView.cs" t="Include" />
+                <e p="ContactElementView.cs" t="Include" />
+                <e p="ContactListScrollRect.cs" t="Include" />
+                <e p="LoopScrollContactDataArraySource.cs" t="Include" />
+                <e p="LoopScrollContactElementPrefabSource.cs" t="Include" />
+                <e p="SearchButtonView.cs" t="Include" />
+                <e p="SortContactsByAlphabetView.cs" t="Include" />
+                <e p="SortContactsByDateView.cs" t="Include" />
+              </e>
+              <e p="EditContact" t="Include">
+                <e p="Details" t="Include">
+                  <e p="ContactDetailElement.cs" t="Include" />
+                </e>
+                <e p="EditContactMediator.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>

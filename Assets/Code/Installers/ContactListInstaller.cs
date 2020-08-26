@@ -36,11 +36,21 @@ namespace Code.Installers
             Container.DeclareSignal<RefreshContactListAction>();
             Container.BindSignal<RefreshContactListAction>()
             .ToMethod<RefreshContactListController>(x => x.Execute).FromResolve();
+            
+            Container.DeclareSignal<SortContactsByDateAction>();
+            Container.BindSignal<SortContactsByDateAction>()
+            .ToMethod<SortContactsByDateController>(x => x.Execute).FromResolve();
+            
+            Container.DeclareSignal<SortContactsByAlphabetAction>();
+            Container.BindSignal<SortContactsByAlphabetAction>()
+            .ToMethod<SortContactsByAlphabetController>(x => x.Execute).FromResolve();
         }
 
         private void BindControllers()
         {
             Container.Bind<RefreshContactListController>().AsTransient();
+            Container.Bind<SortContactsByDateController>().AsTransient();
+            Container.Bind<SortContactsByAlphabetController>().AsTransient();
         }
 
         private void BindModels()

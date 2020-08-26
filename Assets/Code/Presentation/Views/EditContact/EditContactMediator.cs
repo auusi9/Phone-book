@@ -19,7 +19,6 @@ namespace Code.Presentation.Views.EditContact
         [SerializeField] private Button _deleteContact;
         [SerializeField] private Button _saveContact;
         [SerializeField] private Button _cancelEditContact;
-        [SerializeField] private Button _background;
 
         [Inject] private SignalBus _signalBus;
 
@@ -34,7 +33,6 @@ namespace Code.Presentation.Views.EditContact
             _deleteContact.onClick.AddListener(DeleteContact);
             _saveContact.onClick.AddListener(SaveContact);
             _cancelEditContact.onClick.AddListener(CancelEdit);
-            _background.onClick.AddListener(CancelEdit);
             
             _signalBus.Subscribe<ContactListRefreshedNotification>(ContactListRefreshed);
             _signalBus.Subscribe<ContactDetailsNotValidNotification>(ContactDetailsNotValid);
@@ -45,7 +43,6 @@ namespace Code.Presentation.Views.EditContact
             _deleteContact.onClick.RemoveListener(DeleteContact);
             _saveContact.onClick.RemoveListener(SaveContact);
             _cancelEditContact.onClick.RemoveListener(CancelEdit);
-            _background.onClick.RemoveListener(CancelEdit);
             
             _signalBus.Unsubscribe<ContactListRefreshedNotification>(ContactListRefreshed);
             _signalBus.Unsubscribe<ContactDetailsNotValidNotification>(ContactDetailsNotValid);
