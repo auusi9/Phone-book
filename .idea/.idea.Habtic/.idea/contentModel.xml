@@ -10,9 +10,6 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="Data" t="Include">
-            <e p="Dto" t="Include">
-              <e p="ContactDto.cs" t="Include" />
-            </e>
             <e p="Persistance.cs" t="Include" />
             <e p="PersistanceAdapter.cs" t="Include" />
             <e p="Ports" t="Include">
@@ -29,17 +26,21 @@
           </e>
           <e p="Presentation" t="Include">
             <e p="Actions" t="Include">
+              <e p="CancelSearchAction.cs" t="Include" />
               <e p="DeleteContactAction.cs" t="Include" />
               <e p="RefreshContactListAction.cs" t="Include" />
               <e p="SaveContactAction.cs" t="Include" />
+              <e p="SearchContactAction.cs" t="Include" />
               <e p="SortContactsByAlphabetAction.cs" t="Include" />
               <e p="SortContactsByDateAction.cs" t="Include" />
             </e>
             <e p="Controllers" t="Include">
+              <e p="CancelSearchController.cs" t="Include" />
               <e p="DeleteContactController.cs" t="Include" />
               <e p="IController.cs" t="Include" />
               <e p="RefreshContactListController.cs" t="Include" />
               <e p="SaveContactController.cs" t="Include" />
+              <e p="SearchContactController.cs" t="Include" />
               <e p="SortContactsByAlphabetController.cs" t="Include" />
               <e p="SortContactsByDateController.cs" t="Include" />
             </e>
