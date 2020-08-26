@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 399884176}
+  _tmpInputField: {fileID: 1792820459}
   _animator: {fileID: 1180618823}
 --- !u!1 &428987649
 GameObject:

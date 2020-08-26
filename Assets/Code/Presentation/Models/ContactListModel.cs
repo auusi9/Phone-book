@@ -24,29 +24,39 @@ namespace Code.Presentation.Models
             SortByCurrentSortType();
         }
 
-        private void SortByCurrentSortType()
-        {
+        private void SortByCurrentSortType(List<ContactVo> contacts = null)
+        {            
             switch (_currentSortType)
             {
                 case SortType.Alphabet:
-                    SortContactsByAlphabet();
+                    SortContactsByAlphabet(contacts);
                     break;
                 case SortType.Date:
-                    SortContactsByDate();
+                    SortContactsByDate(contacts);
                     break;
             }
         }
 
-        public void SortContactsByAlphabet()
+        public void SortContactsByAlphabet(List<ContactVo> contacts = null)
         {
+            if (contacts == null)
+            {
+                contacts = _contacts;
+            }
+            
             _currentSortType = SortType.Alphabet;
-            _signalBus.Fire(new ContactListRefreshedNotification(_contacts.OrderBy(x => x.Name).ToArray()));
+            _signalBus.Fire(new ContactListRefreshedNotification(contacts.OrderBy(x => x.Name).ToArray()));
         }
 
-        public void SortContactsByDate()
+        public void SortContactsByDate(List<ContactVo> contacts = null)
         {
+            if (contacts == null)
+            {
+                contacts = _contacts;
+            }
+            
             _currentSortType = SortType.Date;
-            _signalBus.Fire(new ContactListRefreshedNotification(_contacts.OrderByDescending(x => x.DateAdded).ToArray()));
+            _signalBus.Fire(new ContactListRefreshedNotification(contacts.OrderByDescending(x => x.DateAdded).ToArray()));
         }
 
         public bool SaveContactIfValid(ContactVo contact)
@@ -97,6 +107,17 @@ namespace Code.Presentation.Models
             
             SortByCurrentSortType();
             return true;
+        }
+
+        public void SearchContact(string search)
+        {
+            List<ContactVo> contactsFound = _contacts.Where(x => x.Name.Contains(search)).ToList();
+            SortByCurrentSortType(contactsFound);
+        }
+
+        public void CancelSearch()
+        {
+            SortByCurrentSortType();
         }
 
         public ContactVo[] GetContacts()

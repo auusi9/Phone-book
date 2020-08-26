@@ -44,6 +44,14 @@ namespace Code.Installers
             Container.DeclareSignal<SortContactsByAlphabetAction>();
             Container.BindSignal<SortContactsByAlphabetAction>()
             .ToMethod<SortContactsByAlphabetController>(x => x.Execute).FromResolve();
+            
+            Container.DeclareSignal<SearchContactAction>();
+            Container.BindSignal<SearchContactAction>()
+            .ToMethod<SearchContactController>(x => x.Execute).FromResolve();
+            
+            Container.DeclareSignal<CancelSearchAction>();
+            Container.BindSignal<CancelSearchAction>()
+            .ToMethod<CancelSearchController>(x => x.Execute).FromResolve();
         }
 
         private void BindControllers()
@@ -51,6 +59,8 @@ namespace Code.Installers
             Container.Bind<RefreshContactListController>().AsTransient();
             Container.Bind<SortContactsByDateController>().AsTransient();
             Container.Bind<SortContactsByAlphabetController>().AsTransient();
+            Container.Bind<SearchContactController>().AsTransient();
+            Container.Bind<CancelSearchController>().AsTransient();
         }
 
         private void BindModels()
